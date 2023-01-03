@@ -1,6 +1,7 @@
 :root {
     --white-color: #FFF;
     --main-color: #46B1DE;
+    --shadow-color: #1B1D1F;
   }
   
 @font-face {
@@ -56,7 +57,7 @@ html {
 
 a {
     text-decoration: none;
-    color: #1B1D1F;
+    color:var(--shadow-color);
 }
 
 .conteiner {
@@ -231,7 +232,7 @@ a {
 .language {
     display: flex;
     padding-left: 23px;
-    color: #1B1D1F;
+    color:var(--shadow-color);
     padding-top: 18px;
     font-size: 20px;
     line-height: 23px;
@@ -278,7 +279,7 @@ a {
 .main-page {
     margin-top: 185px;
     max-width: 480px;
-    color: #1B1D1F;       
+    color:var(--shadow-color);       
 }
 
 @media(max-width: 480px){
@@ -437,7 +438,7 @@ a {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    color: #1B1D1F;
+    color:var(--shadow-color);
 }
 
 .text-why h2 {
@@ -446,7 +447,7 @@ a {
     font-size: 34px;
     line-height: 130%;
     margin-top: 30px;
-    color: #1B1D1F;
+    color:var(--shadow-color);
 }
 
 .text-why h2 span {
@@ -478,13 +479,22 @@ a {
     margin-top: 50px;    
 }
 
-@media(max-width: 480px){
+@media(max-width: 992px){
+    .block-with-boxes{
+        width: 992px;
+        height: 100%;
+        align-items: center; 
+        gap: 12px 20px;       
+}
+}
+
+/* @media(max-width: 480px){
     .block-with-boxes{
         width: 340px;
         height: 100%;
         align-items: center;        
 }
-}
+} */
 
 .flex-center {
     display: flex;
@@ -497,6 +507,13 @@ a {
     width: 300px;
     height: 176px; 
     padding: 10px 20px; 
+}
+
+@media(max-width: 992px){
+    .box{
+        width: 90%;
+        height: 90%;   
+}
 }
 
 .inbox {
@@ -525,8 +542,55 @@ a {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: #1B1D1F;
+    color:var(--shadow-color);
 }
+
+/* *************tooth_big************ */
+
+/* .h2_befor_tooth {
+    color: var(--shadow-color);
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    padding: 90px 0 50px 0; 
+}
+
+.h2_befor_tooth span {
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.wrapper_big_tooth {
+
+}
+
+.container_for_tooth {
+    width:302px;
+    height: 302px;
+    margin: 0 auto;
+}
+
+.big_tooth_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.tooth_big {
+    border: 1px solid #1B1D1F;
+    border-radius: 50%;
+    width:100%;
+    height:100%;
+    position: relative;
+}
+
+.point_around {
+
+} */
+
+
 
 /* *************block registration************ */
 
@@ -556,7 +620,7 @@ a {
     border: 1px solid #D9D9D9;
     backdrop-filter: blur(2px);
     border-radius: 10px;
-    color: #1B1D1F;
+    color:var(--shadow-color);
 }
 
 .inner-block-registration h2{
@@ -703,7 +767,7 @@ a {
     display: flex;
     height: 23px;
     width: 77px;
-    color: #1B1D1F;
+    color:var(--shadow-color);
     margin-top: 27px;
     font-size: 20px;
     line-height: 23px;
