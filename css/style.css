@@ -736,7 +736,7 @@ a {
 
 @media(max-width: 480px){
     .footer-contacts {
-      margin: 44px 0 0 0;          
+      margin: 46px 0 0 0;          
 }
 }
 
@@ -751,6 +751,12 @@ a {
     font-size: 20px;
     line-height: 135%;   
     margin-top: 18px;
+}
+
+@media(max-width: 480px){
+    .inform-contacts {
+      padding-top: 26px;         
+}
 }
 
 .adress {
@@ -773,6 +779,12 @@ a {
     justify-content: space-between;
     width: 137px;
     margin-top: 10px;
+}
+
+@media(max-width: 480px){
+    .footer-messengers {
+      padding-top: 26px;         
+}
 }
 
 .footer-instagram {
