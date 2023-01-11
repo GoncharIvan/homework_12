@@ -19,18 +19,17 @@
                         <p><span class="logo-text">Dr. Nicola Tesla</span><br><span class="dentist">dentist</span></p> 
                     </div>                             
                     <ul class="navigation">
-                        <li class="">
-                            <a href="#">Main</a>
+                        <li>
+                            <a class="li_navigation_header" href="#">Main</a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a class="li_navigation_header" href="#">Services</a>
                         </li>
                         <li>
-                            <a href="#">Contacts</a>
+                            <a class="li_navigation_header" href="#">Contacts</a>
                         </li>
                     </ul>                
                     <div class="phone-header">
-                        <img class="phone-logo-hider" src="./img/img-main/-phone-in-talk_90490 1.svg" alt="tel">
                         <a class="nomer-header" href="tel:+380999999999">+38 (099) 999-99-99</a>
                     </div>
                 </div>
@@ -38,7 +37,6 @@
                     <li>
                         <a class="UA" href="#">UA</a>
                     </li>
-                    <span class="line-lenguage">|</span>
                     <li>
                         <a class="EN" href="#">EN</a>
                     </li>
@@ -60,10 +58,10 @@
     </section>
     <section>
         <div class="conteiner">
-            <div class="three-blocks-bottom">
-                <span class="block-bottom"><span class="nomber-bottom">15</span><span class="textspan">years providing dental treatment services for adults and children</span></span>
-                <span class="block-bottom"><span class="nomber-bottom">90%</span><span class="textspan">clients apply to me again</span></span>
-                <span class="block-bottom"><span class="nomber-bottom">12</span><span class="textspan">months warranty for the services provided</span></span>
+            <div class="three-blocks">
+                <span class="block-bottom"><span class="nomber-bottom">15</span><span class="block_text">years providing dental treatment services for adults and children</span></span>
+                <span class="block-bottom"><span class="nomber-bottom">90%</span><span class="block_text">clients apply to me again</span></span>
+                <span class="block-bottom"><span class="nomber-bottom">12</span><span class="block_text">months warranty for the services provided</span></span>
             </div>
         </div>  
         <div class="conteiner">
@@ -156,7 +154,7 @@
                     </div>
                 </div>
                 <div class="container_for_tooth">
-                    <div class="tooth_big">
+                    <div class="tooth_circle">
                         <img class="big_tooth_img" src="./img/img-main/tooth_big.png" alt="tooth big">
                         <div class="point_around point_around--1">
                             <span class="plus plus--1">+</span>
@@ -207,27 +205,23 @@
             <div class="inner-block-registration">
                 <h2>Make an appointment</h2>
                 <p>Fill out the form and we will contact you to make an appointment</p>
-                <div class="date-buttons">
-                    <div class="data-input">
-                        <img src="./img/img-main/user 4.svg" alt="logo-name">
-                        <span class="line-2">|</span>
-                        <input type="text" name="your name" placeholder="Your name">
+                <form class="date-buttons">
+                    <div class="data-input data-input_name">
+                        <input class="button_registration placeholder_name" type="text" name="name" placeholder="Your name">
                     </div>
-                    <div class="data-input" aria-colspan="phone">
-                        <img src="/img/img-main/-phone-in-talk_90490 1.svg" alt="logo-name">
-                        <span class="line-2">|</span>
-                        <input type="number" name="your phone" placeholder="Phone number">
+                    <div class="data-input data-input_nomber_phone">
+                        <input class="button_registration placeholder_nomber" type="number" name="phone"   placeholder="Phone number">
                     </div>
-                    <div class="button-sign-up">
-                        <a href="#">SIGN UP</a>
-                    </div>
-                </div>
+                    <button class="button-sign-up" type="submit">SIGN UP</button> 
+                </form>
             </div>
         </div>
-        <div class="pictures">
-            <img src="./img/img-main/Rectangle 11.png" alt="">
-            <img src="./img/img-main/Rectangle 12.png" alt="">
-            <img src="./img/img-main/Rectangle 13.png" alt="">
+        <div class="conteiner">
+            <div class="pictures">
+                <img src="./img/img-main/Rectangle 11.png" alt="">
+                <img src="./img/img-main/Rectangle 12.png" alt="">
+                <img src="./img/img-main/Rectangle 13.png" alt="">
+            </div>
         </div>
     </section>
     <footer class="background-footer">
@@ -245,9 +239,12 @@
                                 <a href="#"><p  class="footer-services">Services</p></a>
                             </nav>
                             <ul  class="language-footer">
-                                <li><a class="UA" href="#">UA</a></li>
-                                <span class="line-lenguage">|</span>
-                                <li><a class="EN" href="#">EN</a></li>
+                                <li>
+                                    <a class="UA" href="#">UA</a>
+                                </li>
+                                <li>
+                                    <a class="EN" href="#">EN</a>
+                                </li>
                             </ul>
                         </div> 
                         <div class="footer-hours">
@@ -263,21 +260,18 @@
                         <P>Nicola Tesla</P>
                         <p class="adress">339 5th Ave, New York</p>
                         <div class="footer-phone">
-                            <img src="./img/img-footer/2849835-call-cell-communication-interface-multimedia-phone-telephone_108000 1.png" alt="phone">
-                            <a class="footer-nomber" href="tel:+380999999999">+38 (099) 999-99-99</a>
+                            <a class="footer_link footer-nomber" href="tel:+380999999999">+38 (099) 999-99-99</a>
                         </div>
                         <div class="footer-messengers">
                             <a target="blank" href="viber://chat?number=%2B380999999999"><img src="./img/img-footer/viber_logo_icon_144761 1.png" alt="viber"></a>
                             <a target="blank" href="https://telegram.me/jack_malbon"><img src="./img/img-footer/telegram_icon_131945 1.png" alt="telegram"></a>
                             <a target="_blank" href="https://wa.me/3807125520?chat"><img class="whatsapplogo" src="./img/img-footer/whatsapp-logo_icon-icons.com_57054 1.png" alt="whatsapp"></a>
                         </div>
-                        <div class="footer-instagram">
-                            <a href="https://www.instagram.com/"><img src="./img/img-footer/icons8-instagram 2.svg" alt="instagram"></a>
-                            <span>dr.NikTes</span>
+                        <div class="footer-instagram_wrap">
+                            <a class="footer_link footer-instagram" href="https://www.instagram.com/" target="blank">dr.NikTes</a>
                         </div>
-                        <div class="footer-gmail">
-                            <a class="gmail-logo" target="blank" href="#"><img src="./img/img-footer/email.png" alt="gmail"></a>
-                            <a class="gmail-text" href="dr.niktes@gmail.com">dr.niktes@gmail.com</a>
+                        <div class="footer-gmail_wrap">
+                            <a class="footer_link gmail-footer" href="dr.niktes@gmail.com">dr.niktes@gmail.com</a>
                         </div>
                         <p class="copyright">© Copyright 2022</p>
                     </div>
