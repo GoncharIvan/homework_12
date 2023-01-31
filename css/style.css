@@ -211,11 +211,67 @@ a {
     background-size: contain;
 }
 
-.burger {
-    cursor: pointer;
+
+@media(max-width: 480px){
+    .nomer-header{
+        font-size: 15px;
+        padding-left: 5px;
+    }
 }
 
-@media(max-width: 768px){
+@media(max-width: 768px) {
+    .burger {
+        display: block;
+        position: absolute;
+        width: 15px;
+        height: 9px;
+        cursor: pointer;
+    }
+
+    .burger:focus:before {
+        transform: rotate(45deg);
+        color: var(--main-color);
+    }
+    
+    .burger:before,
+    .burger:after {
+        content: "";
+        position: absolute;
+        background-color:#1B1D1F;
+        width: 100%;
+        height: 1px;
+    }
+
+    .burger:after {
+        bottom: 0;
+    }
+    
+    .burger span {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color:#1B1D1F;
+        top: 4px;
+    } 
+
+    .burger span:focus {
+        width: 0px;
+        color: var(--main-color);
+    }
+
+    .wrap_burger {
+        display: flex;
+        justify-content: right;
+        margin-top: 50px;
+    }
+
+
+}
+
+
+
+
+/* @media(max-width: 768px){
     .burger::before{
         content: "";
         position: absolute;
@@ -251,20 +307,10 @@ a {
 }
 }
 
-
-.burger span:focus{
+.burger span::after:hover{
     width: 0px;
-    color: #0591CC;
-
-
-}
-
-@media(max-width: 480px){
-    .nomer-header{
-        font-size: 15px;
-        padding-left: 5px;
-}
-}
+    color:var(--main-color)
+} */
 
 .language {
     display: flex;
