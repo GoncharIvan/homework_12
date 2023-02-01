@@ -172,7 +172,7 @@ a {
 }
 }
 
-@media(max-width: 630px){
+@media(max-width: 768px){
     .navigation{
        display: none;     
 }
@@ -225,92 +225,48 @@ a {
         position: absolute;
         width: 15px;
         height: 9px;
+    }
+   
+    .burger span,
+    .burger span:before,
+    .burger span:after {
+        content: "";
+        position: absolute;
+        background-color:#1B1D1F;
+        width: 100%;
+        height: 1px;
+        transition: all 0.3s ease 0s;
         cursor: pointer;
     }
 
-    .burger:focus:before {
-        transform: rotate(45deg);
-        color: var(--main-color);
-    }
-    
-    .burger:before,
-    .burger:after {
-        content: "";
-        position: absolute;
-        background-color:#1B1D1F;
-        width: 100%;
-        height: 1px;
+    .burger span:before {
+        transform: translateY(-4px);
     }
 
-    .burger:after {
-        bottom: 0;
+    .burger span:after {
+        transform: translateY(4px);
     }
-    
-    .burger span {
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        background-color:#1B1D1F;
-        top: 4px;
-    } 
+
+    .burger span:focus:before {
+        transform: rotate(45deg);
+        background-color:#46B1DE;
+    }
+
+    .burger span:focus:after {
+        transform: rotate(-45deg);
+        background-color:#46B1DE;
+    }
 
     .burger span:focus {
-        width: 0px;
-        color: var(--main-color);
+        height: 0px;
     }
-
+ 
     .wrap_burger {
         display: flex;
         justify-content: right;
-        margin-top: 50px;
+        margin-top: 10px;
     }
-
-
 }
-
-
-
-
-/* @media(max-width: 768px){
-    .burger::before{
-        content: "";
-        position: absolute;
-        border: 1px solid #1B1D1F;
-        width: 15px;
-        height: 0px;
-        right: 84px;
-        top: 43px;
-}
-}
-
-@media(max-width: 768px){
-    .burger::after{
-        content: "";
-        position: absolute;
-        border: 1px solid #1B1D1F;
-        width: 15px;
-        height: 0px;
-        right: 84px;
-        top: 47px;
-}
-}
-
-@media(max-width: 768px){
-    .burger span::after{
-        content: "";
-        position: absolute;
-        border: 1px solid #1B1D1F;
-        width: 15px;
-        height: 0px;
-        right: 84px;
-        top: 51px;
-}
-}
-
-.burger span::after:hover{
-    width: 0px;
-    color:var(--main-color)
-} */
 
 .language {
     display: flex;
