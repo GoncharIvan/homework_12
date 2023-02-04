@@ -140,6 +140,7 @@ a {
                 }    
             }
         }
+        
         .navigation {
             display:grid;
             grid-template-columns: repeat(3, auto);
@@ -148,8 +149,8 @@ a {
             max-width: 97%;
 
             @media(max-width: 992px){
-                    grid-template-columns: repeat(1, auto);
-                    gap: 15px;    
+                    // grid-template-columns: repeat(1, auto);
+                    gap: 20px;    
             }           
             @media(max-width: 768px){
                    display: none;     
@@ -189,55 +190,97 @@ a {
                     background-size: contain;
                 }
             }
+            
+            #menu__toggle {
+                display: none;
+            }
 
-            .wrap_burger {
-                display: flex;
-                justify-content: right;
-                margin-top: 10px;
-                
-                .burger {
-                    @media(max-width: 768px) {
-                            display: block;
-                            position: absolute;
-                            width: 15px;
-                            height: 9px;
+            .menu__box {
+                visibility: hidden;
+            }
 
-                            span {
-                                content: "";
-                                position: absolute;
-                                background-color: $shadow_color;
-                                width: 100%;
-                                height: 1px;
-                                transition: all 0.3s ease 0s;
-                                cursor: pointer;
-                                &::before,&::after {
-                                content: "";
-                                position: absolute;
-                                background-color: $shadow_color;
-                                width: 100%;
-                                height: 1px;
-                                transition: all 0.3s ease 0s;
-                                cursor: pointer;
-                                }
-                                &::before {
-                                    transform: translateY(-4px);
-                                }
-                                &::after {
-                                    transform: translateY(4px);
-                                }
-                                &:focus::before {
-                                    transform: rotate(45deg);
-                                    background-color: $main_color;
-                                }
-                                &:focus::after {
-                                    transform: rotate(-45deg);
-                                    background-color: $main_color;
-                                }
-                                &:focus {
-                                    height: 0px;
-                                }
-                            }
+             
+
+            @media(max-width: 768px){
+                .hamburger-menu {
+                    display: flex;
+                    justify-content: end;
+                    position: relative;
+
+                    #menu__toggle {
+                        display: none;
                     }
+    
+                    .menu__btn {
+                        position: absolute;
+                        margin-top: 10px;
+                        width: 15px;
+                        height: 8px;
+                        cursor: pointer;
+                        z-index: 1;
+                    }  
+    
+                    .menu__box {
+                        position: absolute;
+                        left: 50px;
+                        visibility: hidden;
+                        height: 110px;
+                        text-align: center;
+                        margin-top: 10px;
+                        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2); 
+                        
+                        .menu__item {
+                            display: block;
+                            padding: 12px 24px;
+                            &:hover {
+                                background-color:rgba(0, 0, 0, .1);
+                                border-radius: 20px;
+                              }
+                        }
+                    }
+    
+                    .menu__btn > span,
+                    .menu__btn > span::before,
+                    .menu__btn > span::after {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $shadow_color;
+                    transition-duration: .50s;
+                    }
+    
+                    .menu__btn > span::before {
+                        content: '';
+                        top: -4px;
+                    }
+    
+                      .menu__btn > span::after {
+                        content: '';
+                        top: 4px;
+                    }
+    
+                      #menu__toggle:checked ~ .menu__btn > span {
+                        transform: rotate(45deg);
+                        background-color: $main_color;
+                    }
+                    
+                      #menu__toggle:checked ~ .menu__btn > span::before {
+                        top: 0;
+                        transform: rotate(0);
+                        background-color: $main_color;
+                    }
+
+                      #menu__toggle:checked ~ .menu__btn > span::after {
+                        top: 0;
+                        transform: rotate(90deg);
+                        background-color: $main_color;
+                    }
+
+                      #menu__toggle:checked ~ .menu__box {
+                        visibility: visible;
+                        left: 0;
+                    }      
                 }
             }
         }
@@ -409,6 +452,8 @@ a {
         }
     }
 }
+
+/* *************three-blocks************* */
 
 .three-blocks {
     display: grid;

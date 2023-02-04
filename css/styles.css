@@ -471,8 +471,7 @@ a {
 }
 @media (max-width: 992px) {
   .header-wrap .header_vithout_language .navigation {
-    grid-template-columns: repeat(1, auto);
-    gap: 15px;
+    gap: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -512,52 +511,81 @@ a {
   background-image: url(../img/img-main/-phone-in-talk_90490\ 1.svg);
   background-size: contain;
 }
-.header-wrap .header_vithout_language .phone-header .wrap_burger {
-  display: flex;
-  justify-content: right;
-  margin-top: 10px;
+.header-wrap .header_vithout_language .phone-header #menu__toggle {
+  display: none;
+}
+.header-wrap .header_vithout_language .phone-header .menu__box {
+  visibility: hidden;
 }
 @media (max-width: 768px) {
-  .header-wrap .header_vithout_language .phone-header .wrap_burger .burger {
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu {
+    display: flex;
+    justify-content: end;
+    position: relative;
+  }
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu #menu__toggle {
+    display: none;
+  }
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu .menu__btn {
+    position: absolute;
+    margin-top: 10px;
+    width: 15px;
+    height: 8px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu .menu__box {
+    position: absolute;
+    left: 50px;
+    visibility: hidden;
+    height: 110px;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  }
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu .menu__box .menu__item {
+    display: block;
+    padding: 12px 24px;
+  }
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu .menu__box .menu__item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu .menu__btn > span,
+.header-wrap .header_vithout_language .phone-header .hamburger-menu .menu__btn > span::before,
+.header-wrap .header_vithout_language .phone-header .hamburger-menu .menu__btn > span::after {
     display: block;
     position: absolute;
-    width: 15px;
-    height: 9px;
-  }
-  .header-wrap .header_vithout_language .phone-header .wrap_burger .burger span {
-    content: "";
-    position: absolute;
-    background-color: #1B1D1F;
     width: 100%;
     height: 1px;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-  }
-  .header-wrap .header_vithout_language .phone-header .wrap_burger .burger span::before, .header-wrap .header_vithout_language .phone-header .wrap_burger .burger span::after {
-    content: "";
-    position: absolute;
     background-color: #1B1D1F;
-    width: 100%;
-    height: 1px;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
+    transition-duration: 0.5s;
   }
-  .header-wrap .header_vithout_language .phone-header .wrap_burger .burger span::before {
-    transform: translateY(-4px);
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu .menu__btn > span::before {
+    content: "";
+    top: -4px;
   }
-  .header-wrap .header_vithout_language .phone-header .wrap_burger .burger span::after {
-    transform: translateY(4px);
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu .menu__btn > span::after {
+    content: "";
+    top: 4px;
   }
-  .header-wrap .header_vithout_language .phone-header .wrap_burger .burger span:focus::before {
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
     background-color: #46B1DE;
   }
-  .header-wrap .header_vithout_language .phone-header .wrap_burger .burger span:focus::after {
-    transform: rotate(-45deg);
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
     background-color: #46B1DE;
   }
-  .header-wrap .header_vithout_language .phone-header .wrap_burger .burger span:focus {
-    height: 0px;
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: #46B1DE;
+  }
+  .header-wrap .header_vithout_language .phone-header .hamburger-menu #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
   }
 }
 .header-wrap .language {
@@ -738,6 +766,7 @@ a {
   }
 }
 
+/* *************three-blocks************* */
 .three-blocks {
   display: grid;
   grid-template-columns: repeat(3, auto);
