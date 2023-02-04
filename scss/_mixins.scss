@@ -1,0 +1,23 @@
+@mixin font {
+    font-family: "Sofia Sans";
+    font-weight: 400;
+} 
+
+@mixin sectionMargin {
+    margin-top: 90px;
+
+    @media(max-width: 768px){
+        margin-top: 30px;
+    }
+}
+
+@mixin triangle($width, $color) {
+    width: 0;
+    height: 0;
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-top: $width solid $color;
+  }
+
+
+ 
